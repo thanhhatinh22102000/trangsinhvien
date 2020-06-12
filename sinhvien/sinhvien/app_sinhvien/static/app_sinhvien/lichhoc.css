@@ -1,0 +1,35 @@
+#head{
+    text-align:center;
+    font-size:40px;
+    color:red;
+    width:1350px;
+    height:160px;
+}
+#table{
+    float:left;
+    width:600px;
+    height:300px;
+}
+#form{
+    float:right;
+    width:700px;
+    height:300px;
+}
+#form li{
+    padding:10px 0px;
+    list-style:none;
+}
+
+h4{
+    color:red;
+    text-align:center;
+    font-size:22px;
+}
+h5{
+    padding:0px 55px;
+}
+table,th,td{
+    border:1px solid black;
+    border-collapse:collapse;
+    background: #D8D8D8;
+}

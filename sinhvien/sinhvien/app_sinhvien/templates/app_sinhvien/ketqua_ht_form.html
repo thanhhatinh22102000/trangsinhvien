@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'app_sinhvien/ketqua_form.css' %}">
+</head>
+<body>
+<h2>Kết quả học tập update</h2>
+<div id="body">
+    <form method="post">
+        {% csrf_token %}
+        <label for="">Họ Tên</label><br/>
+        <li>{{ form.hoten }}</li>
+        <label for="">Tên môn học</label><br/>
+        <li>{{ form.tenmonhoc }}</li>
+        <label for=""> Số tín chỉ</label><br/>
+        <li>{{ form.sotinchhi }}</li>
+        <label for="">Điểm</label>
+        <li>{{ form.diem }}</li>
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+#body{
+    text-align:center;
+    list-style:none;
+}
+
+#body li{
+    padding:10px 10px;
+}
+
+#body label{
+    padding:10px 10px;
+    font-size:17px;
+}
+h2{
+    color:red;
+    font-size:23px;
+    text-align:center;
+}

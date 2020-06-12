@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+ <link rel="stylesheet" href="{% static 'app_sinhvien/thongtin_form.css' %}">
+</head>
+<body>
+<h2>Sinh viên update</h2>
+<div id="body">
+    <form method="post">
+        {% csrf_token %}
+        <label for="">Họ Tên</label><br/>
+        <li>{{ form.hoten }}</li>
+        <label for="">Lớp</label><br/>
+        <li>{{ form.lop }}</li>
+        <label for="">MSV</label><br/>
+        <li>{{ form.msv }}</li>
+        <label for="">Quê quán</label>
+        <li>{{ form.quequan }}</li>
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+</body>
+</html>

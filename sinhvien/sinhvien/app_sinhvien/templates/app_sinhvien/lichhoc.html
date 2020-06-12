@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            color:red;
+            font-size:30px;
+            text-align:center;
+        }
+        a:hover{
+            color: blue;
+            text-decoration: none;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        table,th,td{
+            border:1px solid black;
+            border-collapse:collapse;
+            background: #D8D8D8;
+        }
+        #body li{
+            padding:10px 0px;
+            list-style:none;
+        }
+    </style>
+</head>
+<body>
+<h1>Lịch học</h1>
+<div id="head">
+    <center>
+    <table>
+        <thead>
+            <tr>
+                <th>Họ tên</th>
+                <th>Môn học</th>
+                <th>Thời gian</th>
+                <th>Phòng học</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in lich %}
+        <tr>
+            <td>{{item.hoten}}</td>
+            <td>{{item.tenmonhoc}}</td>
+            <td>{{item.tghoc}}</td>
+            <td>{{item.phonghoc}}</td>
+            <td><a href="{% url "update_lich" item.id %}">update</a></td>
+            <td><a href="{% url "delete_lich" item.id %}">delete</a></td>
+        </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        <h4><a href="{% url "create_lich" %}">Create new lịch học</a></h4>
+    </center>
+</div>
+<div id="body">
+    {% load widget_tweaks %}
+    <center>
+    <form method="get">
+        <label for="">Search by id</label>
+        <li>{% render_field form.hoten class="form-control" %}</li>
+        <li><button class="btn btn-primary btn-lg btn-block" type="submit">Tìm kiếm</button></li>
+    </form>
+    </center>
+</div>
+</body>
+</html>

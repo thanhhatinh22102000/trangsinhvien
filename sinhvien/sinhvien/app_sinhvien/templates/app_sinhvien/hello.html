@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'app_sinhvien/hello.css' %}">
+</head>
+<body>
+    <div id="head"><img src="{% static 'app_sinhvien/anh5.png' %}" width="1350px" height="200px"></div>
+    <div id="danhmuc">
+        <li><a href=" {% url "thongtin" %}">Xem thông tin sinh viên</a></li>
+        <li><a href=" {% url "lichhoc" %}">Xem lịch học sinh viên</a></li>
+        <li><a href=" {% url "ketqua" %}">Xem kết quả học tập sinh viên</a></li>
+    </div>
+    <div id="img">
+        <ul>
+            <li>Ngày vào trường: 10/8/2018</li>
+            <li>Trạng thái: Đang học</li>
+            <li>Nghành: Công nghệ thông tin</li>
+            <li>Chuyên nghành: Công nghệ phần mềm</li>
+            <li>Mã hồ sơ: DL 111</li>
+        </ul>
+        <ul>
+            <li>Giới tính: nam</li>
+            <li>Lớp: D13CNPM5</li>
+            <li>Email: thanh@gmail.com</li>
+            <li>Sđt: 0984785612</li>
+            <li>Quê quán: hà tĩnh</li>
+        </ul>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
